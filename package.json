@@ -1,0 +1,11 @@
+{
+  "name": "new-appsman",
+  "description": "TNG",
+  "repository": "https://github.com/mpivotal/potential-octo-bassoon.git",
+  "license": "Apache-2.0",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  }
+}
