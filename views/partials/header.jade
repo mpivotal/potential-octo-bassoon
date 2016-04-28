@@ -1,6 +1,18 @@
-.col-md-24.pan
-  a(href='/')
-    .mrm.txt-m.logo(style='background-image: url(/images/pivotal-header-logo@2x.png);')
-    span.txt-m.mll.h4.product.type-neutral-11
-      span.em-high
-        | Apps Manager
+.col-xs-24.col-sm-24.col-md-24.col-lg-24.pan.bg-dark-1.type-neutral-11
+  .col-xs-20.col-sm-20.col-md-20.col-lg-20.pan
+    a(href='/')
+      .mrm.txt-m.logo(style='background-image: url(/images/pivotal-header-logo@2x.png);')
+      span.txt-m.mll.h4.product.type-neutral-11
+        span.em-high
+          | Apps Manager
+  .col-xs-4.col-sm-4.col-md-4.col-lg-4.txt-r.ptl
+    .dropdown
+      button#account-dropdown.dropdown-toggle.btn.btn-link.type-neutral-11.em-default(data-toggle='dropdown', type='button')
+        span Appdev Danni
+        |     
+        span.caret
+      |   
+      ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='account-dropdown')
+        li(role='presentation')
+          a(role='menuitem', tabindex='-1', href='#') My Profile
+          a(role='menuitem', tabindex='-1', href='#') Logout

@@ -5,16 +5,17 @@ html
     meta( name='viewport', content='width=device-width, initial-scale=1')
     link( rel='shortcut icon', href='/shortcut-icon.png')
     link( rel='stylesheet', href='/styles/custom.css', media='screen')
-    link( rel='stylesheet', href='/pui-3.0.0/pivotal-ui.min.css')
-    script( src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    link( rel='stylesheet', href='/pui-v3.0.0-alpha/pivotal-ui.min.css')
+    script( src='/pui-v3.0.0-alpha/pivotal-ui.min.js')
     script( src='/javascripts/functions.js')
   
-  body
+  body( style='min-width: 1280px;')
     .container-fluid.pan
-      section.header.bg-dark-1.type-neutral-11
-        row.pan.man
+      section.header
+        .row.pan.man
           include ../partials/header
       section.content
-        include ../partials/content
+        .row.pan.man
+          include ../partials/content
       section.footer
         include ../partials/footer
