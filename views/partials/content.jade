@@ -1,7 +1,7 @@
 .col-md-24.pan
   //- Left Panel
   .col-xs-4.col-sm-4.col-md-4.col-lg-4.pan
-    .org-label.phxl.ptxl.pbl
+    .org-label.phxl.ptxl
       .em-alt.type-sm.em-low
         | Org
       .dropdown
@@ -29,20 +29,20 @@
   //- Center Panel
   .col-xs-16.col-sm-16.col-md-16.col-lg-16.bg-neutral-11.pan
     .app-status
-      .running.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl
+      .running.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl.active( style='border-bottom-color: #229BE6;')
         .h1.em-high.pvn.mvn.type-accent-5
           | 16
-        .type-sm
+        .type-sm.em-low
           | Running
-      .crashing.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl
-        .h1.em-high.pvn.mvn.type-error-1
+      .crashing.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl( style='border-bottom-color: #B31B22;')
+        .h1.em-high.pvn.mvn.type-error-3
           | 1
-        .type-sm
+        .type-sm.em-low
           | Crashing
-      .stopped.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl
+      .stopped.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl( style='border-bottom-color: inherit;')
         .h1.em-high.pvn.mvn.type-neutral-3
           | 15
-        .type-sm
+        .type-sm.em-low
           | Stopped
   //- Right Panel
   .col-xs-4.col-sm-4.col-md-4.col-lg-4.pan
