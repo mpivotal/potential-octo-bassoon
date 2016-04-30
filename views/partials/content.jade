@@ -1,24 +1,51 @@
 .col-md-24.pan
-  .col-xs-4.col-sm-4.col-md-4.col-lg-4.ptxl
-    .em-alt.type-sm
-      | Org
-    | Yahoo! JAPAN
+  //- Left Panel
+  .col-xs-4.col-sm-4.col-md-4.col-lg-4.pan
+    .org-label.phxl.ptxl.pbl
+      .em-alt.type-sm.em-low
+        | Org
+      .dropdown
+        button#account-dropdown.dropdown-toggle.btn.btn-link.em-default.pln.ptn.type-neutral-3(data-toggle='dropdown', type='button')
+          span.type-neutral-2.em-high
+            | Acme Software Inc
+          span.fa.fa-icon.fa-chevron-down.type-sm.plm.em-low
+        ul.dropdown-menu.dropdown-menu-left(role='menu', aria-labelledby='account-dropdown')
+          li(role='presentation')
+            .type-neutral-5.phl.pts Orgs
+            a(role='menuitem', tabindex='-1', href='#') Acme Operations
+            a(role='menuitem', tabindex='-1', href='#') Acme People Apps
+    hr.mvl
+    ul.org-menu-items.list-unstyled.phxl
+      li.pvs.apps.em-high.type-neutral-2 Apps
+      li.pvs.routes Routes
+      li.pvs.services Services
+      li.pvs.marketplace Marketplace
+    hr.mvl
+    ul.menu-items.list-unstyled.phxl
+      li.pvs Tools
+      li.pvs Docs
+      li.pvs Support
+
+  //- Center Panel
   .col-xs-16.col-sm-16.col-md-16.col-lg-16.bg-neutral-11.pan
-    .col-md-8.txt-c.pvxxl
-      .h1.em-high.pvn.mvn.type-accent-5 
-        | 16
-      .type-sm
-        | Running
-    .col-md-8.txt-c.pvxxl
-      .h1.em-high.pvn.mvn.type-accent-5 
-        | 16
-      .type-sm
-        | Running
-    .col-md-8.txt-c.pvxxl
-      .h1.em-high.pvn.mvn.type-accent-5 
-        | 16
-      .type-sm
-        | Running
-  .col-xs-4.col-sm-4.col-md-4.col-lg-4.ptxl
-    .em-alt.type-sm
-      | Org Quota
+    .app-status
+      .running.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl
+        .h1.em-high.pvn.mvn.type-accent-5
+          | 16
+        .type-sm
+          | Running
+      .crashing.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl
+        .h1.em-high.pvn.mvn.type-error-1
+          | 1
+        .type-sm
+          | Crashing
+      .stopped.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl
+        .h1.em-high.pvn.mvn.type-neutral-3
+          | 15
+        .type-sm
+          | Stopped
+  //- Right Panel
+  .col-xs-4.col-sm-4.col-md-4.col-lg-4.pan
+    .org-quota.phxl.ptxl.pbl
+      .em-alt.type-sm.em-low
+        | Org Quota

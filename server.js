@@ -4,7 +4,7 @@ var lessMiddleware = require('less-middleware');
 
 app.set( 'views', __dirname + '/views')
 app.set( 'view engine', 'jade')
-app.use(lessMiddleware(__dirname + '/less', { dest: 'public/styles/' }));
+app.use( lessMiddleware(__dirname + '/public'))
 app.use( express.static( __dirname + '/public'))
 app.locals.pretty = true
 
