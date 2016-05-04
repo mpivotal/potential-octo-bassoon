@@ -15,9 +15,20 @@
   .app-status {
     .running, .crashing, .stopped {
       border-right: 1px solid #dadada;
+    }
+    .running {
       &.active {
-        border-bottom-style: solid;
-        border-bottom-width: 3px;
+        box-shadow: inset 0 -3px 0 0 #229BE6;
+      }
+    }
+    .crashing {
+      &.active {
+        box-shadow: inset 0 -3px 0 0 #B31B22;
+      }
+    }
+    .stopped {
+      &.active {
+        box-shadow: inset 0 -3px 0 0 #686868;
       }
     }
   }
