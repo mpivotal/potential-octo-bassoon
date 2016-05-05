@@ -12,12 +12,14 @@
   .org-menu-items, .menu-items {
     // sldkjf
   }
-  .app-status {
+  .app-states {
     .running, .crashing, .stopped {
       border-right: 1px solid #dadada;
       border-bottom: 1px solid #dadada;
+      cursor: pointer;
       &.active {
         border-bottom: 0;
+        cursor: default;
       }
     }
     .running {
@@ -39,7 +41,7 @@
       &.active {
         box-shadow: inset 0 -3px 0 0 #686868;
         border-bottom: 1px solid #686868;
-        background-color: rgba(104, 104, 104, 0.05)
+        background-color: rgba(104, 104, 104, 0.1)
       }
     }
   }

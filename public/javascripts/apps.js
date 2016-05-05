@@ -1,5 +1,11 @@
 $(document).ready( function() {
   if ( $('.org .apps').length != 0 ) {
+    // app status selection
+    var appstates = $('.app-states .status')
+    appstates.click( function() {
+      appstates.removeClass('active')
+      $(this).addClass('active')
+    })
     // app selection
     var checkboxes = $("input[type='checkbox'][name='apps[]']")
     var actions = $("button#app-actions")
@@ -21,5 +27,5 @@ $(document).ready( function() {
       }
     })
   }
-  console.log( 'hi' )
+  console.log( "Howdy, y'all!" )
 })
