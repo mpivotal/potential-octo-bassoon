@@ -13,7 +13,7 @@ app.get ('/', function ( req, res) {
 })
 
 app.get( '/org/apps', function ( req, res) {
-  res.render( 'pages/org', { })
+  res.render( 'pages/apps', { })
 })
 
 app.listen( process.env.PORT || 4000)
