@@ -11,7 +11,7 @@ app.locals.pretty = true
 app.get ('/', function (req, res) {
   res.redirect('/org')
 })
-app.get ('/:var(org|apps)', function (req, res) {
+app.get ('/:var(org|apps|org/apps)', function (req, res) {
   res.redirect('/org/apps/running')
 })
 app.get( '/org/apps/running', function (req, res) {
