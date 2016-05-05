@@ -24,22 +24,34 @@
           span.caret.mls
         ul.dropdown-menu(role='menu', aria-labelledby='app-actions')
           li.presentation
-            a Start
+            a.pll.type-neutral-5.bg-neutral-11(style='cursor: default;')
+              .fa.fa-icon.fa-play.small.mrxl
+              | Start
           li.divider.mvn
           li.presentation
-            a Stop
+            a.pll
+              .fa.fa-icon.fa-square.small.mrxl
+              | Stop
           li.divider.mvn
           li.presentation
-            a Rename
+            a.rename.pll
+              .fa.fa-icon.fa-pencil.small.mrxl
+              | Rename
           li.divider.mvn
           li.presentation
-            a Restage
+            a.pll
+              .fa.fa-icon.fa-repeat.small.mrxl
+              | Restart
           li.divider.mvn
           li.presentation
-            a Restart
+            a.pll
+              .fa.fa-icon.fa-refresh.small.mrxl
+              | Restage
           li.divider.mvn
           li.presentation
-            a.type-error-3 Delete
+            a.pll.type-error-3
+              .fa.fa-icon.fa-trash.small.mrxl
+              | Delete
       span.dropdown.mvl.mhm
         button#spaces.dropdown-toggle.btn.btn-default-alt.em-default.type-neutral-3(type='button', data-toggle='dropdown', arai-haspopup='true', aria-exanded='false')
           span All Spaces

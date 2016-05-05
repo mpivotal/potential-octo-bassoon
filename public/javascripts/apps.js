@@ -7,10 +7,17 @@ $(document).ready( function() {
       checkboxes.prop('checked', checkboxes.prop('checked'))
     })
     checkboxes.click( function() {
+      // toggle the actions button
       if ($("input:checkbox:checked").length > 0) {
         actions.prop('disabled', false)
       } else {
         actions.prop('disabled', true)
+      }
+      // toggle the rename action
+      if ($("input:checkbox:checked").length > 1) {
+        $('.rename').addClass('type-neutral-5').addClass('bg-neutral-11').prop('style', 'cursor: default;')
+      } else {
+        $('.rename').removeClass('type-neutral-5').removeClass('bg-neutral-11').prop('style', 'cursor: pointer;')
       }
     })
   }
