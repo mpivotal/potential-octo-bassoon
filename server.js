@@ -11,7 +11,9 @@ app.locals.pretty = true
 app.get ('/', function ( req, res) {
   res.redirect('/org/apps')
 })
-
+app.get ('/org', function ( req, res) {
+  res.redirect('/org/apps')
+})
 app.get( '/org/apps', function ( req, res) {
   res.render( 'pages/apps', { })
 })
