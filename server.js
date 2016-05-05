@@ -12,10 +12,16 @@ app.get ('/', function (req, res) {
   res.redirect('/org')
 })
 app.get ('/:var(org|apps)', function (req, res) {
-  res.redirect('/org/apps')
+  res.redirect('/org/apps/running')
 })
-app.get( '/org/apps', function (req, res) {
-  res.render( 'pages/apps', { })
+app.get( '/org/apps/running', function (req, res) {
+  res.render( 'pages/orgs/apps/running', { })
+})
+app.get( '/org/apps/crashing', function (req, res) {
+  res.render( 'pages/orgs/apps/crashing', { })
+})
+app.get( '/org/apps/total', function (req, res) {
+  res.render( 'pages/orgs/apps/total', { })
 })
 
 app.listen( process.env.PORT || 4000)

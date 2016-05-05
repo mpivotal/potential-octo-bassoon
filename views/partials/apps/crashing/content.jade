@@ -1,20 +1,5 @@
-.apps.running.col-xs-16.col-sm-16.col-md-16.col-lg-16.bg-neutral-11.pan(style='border-right: 1px solid rgba(0,0,0,0.1); border-left: 1px solid rgba(0,0,0,0.1); min-height: 720px;')
-  .row.man.app-states
-    .status.running.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl.active
-      .h1.em-high.pvn.mvn.type-accent-5
-        | 5
-      .type-sm.em-low
-        | Running
-    .status.crashing.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl
-      .h1.em-high.pvn.mvn.type-error-3
-        | 1
-      .type-sm.em-low
-        | Crashing
-    .status.stopped.col-xs-8.col-sm-8.col-md-8.col-lg-8.txt-c.pvxxl
-      .h1.em-high.pvn.mvn.type-neutral-3
-        | 6
-      .type-sm.em-low
-        | Total
+.apps.crashing.col-xs-16.col-sm-16.col-md-16.col-lg-16.bg-neutral-11.pan(style='border-right: 1px solid rgba(0,0,0,0.1); border-left: 1px solid rgba(0,0,0,0.1); min-height: 720px;')
+  include ../states
   //- hr.mvn
   .row.man.apps
     .col-xs-24.col-sm-24.col-md-24.col-lg-24.pan.man
@@ -75,7 +60,7 @@
           li.presentation
             a vlanyale
 
-      table.table.pan
+      table#apps.table.pan
         tr
           th
             input(type='checkbox', name='apps[]', value='all')
@@ -85,74 +70,15 @@
           th Memory
           th Last pushed
           th Routes
-          th 
         tr
           td
             input(type='checkbox', name='apps[]')
           td.name 
-            a bigcraft
-          td.type-accent-5 Running
+            a opelog
+          td.type-error-3 Crashing
           td 1
           td 512MB
-          td 2 days ago
-          td 
-            a bigcraft.example.com
-          td.prn
-            a.fa.fa-icon.fa-chevron-right.pam.small
-        tr
-          td
-            input(type='checkbox', name='apps[]')
-          td.name 
-            a brite.js
-          td.type-accent-5 Running
-          td 1
-          td 512MB
-          td 2 days ago
-          td( style='max-width: 200px;')
+          td Just now
+          td.routes
             .type-ellipsis
-              a britejs.example.com
-              | , 
-              a otherurl.example.com
-              | , 
-              a otherurl.example.com
-          td.prn
-            a.fa.fa-icon.fa-chevron-right.pam.small
-        tr
-          td
-            input(type='checkbox', name='apps[]')
-          td.name 
-            a Morscontly
-          td.type-accent-5 Running
-          td 1
-          td 512MB
-          td 2 days ago
-          td 
-            a morscontly.example.com
-          td.prn
-            a.fa.fa-icon.fa-chevron-right.pam.small
-        tr
-          td
-            input(type='checkbox', name='apps[]')
-          td.name 
-            a ntwig
-          td.type-accent-5 Running
-          td 1
-          td 512MB
-          td 2 days ago
-          td 
-            a ntwig.example.com
-          td.prn
-            a.fa.fa-icon.fa-chevron-right.pam.small
-        tr
-          td
-            input(type='checkbox', name='apps[]')
-          td.name 
-            a watellabs
-          td.type-accent-5 Running
-          td 1
-          td 512MB
-          td 2 days ago
-          td 
-            a watellabs.example.com
-          td.prn
-            a.fa.fa-icon.fa-chevron-right.pam.small
+              a(href='http://example.com', target='_blank') opelog.example.com

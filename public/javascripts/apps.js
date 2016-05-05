@@ -1,11 +1,24 @@
 $(document).ready( function() {
   if ( $('.org .apps').length != 0 ) {
     // app status selection
-    var appstates = $('.app-states .status')
-    appstates.click( function() {
-      appstates.removeClass('active')
-      $(this).addClass('active')
-    })
+    // var appstates = $('.app-states .status')
+    // appstates.click( function() {
+    //   appstates.removeClass('active')
+    //   $(this).addClass('active')
+    // })
+    // default state is active
+    var defaultstate = $('.app-states .running')
+    var crashing = $('.app-states .crashing')
+    var total = $('.app-states .total')
+    if ($('.apps.running').length > 0) {
+      defaultstate.addClass('active')
+    }
+    if ($('.apps.crashing').length > 0) {
+      crashing.addClass('active')
+    }
+    if ($('.apps.total').length > 0) {
+      total.addClass('active')
+    }
     // app selection
     var checkboxes = $("input[type='checkbox'][name='apps[]']")
     var actions = $("button#app-actions")

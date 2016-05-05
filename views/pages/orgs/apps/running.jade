@@ -1,0 +1,28 @@
+doctype
+html
+  head
+    title Apps Manager
+    meta( name='viewport', content='width=device-width, initial-scale=1')
+    link( rel='shortcut icon', href='/shortcut-icon.png')
+    link( rel='stylesheet', href='/css/custom.css', media='screen')
+    link( rel='stylesheet', href='/pui-v3.0.0-alpha/pivotal-ui.min.css')
+    script( src='/pui-v3.0.0-alpha/pivotal-ui.min.js')
+    script( src='/javascripts/apps.js')
+  
+  body.org.bg-neutral-10.type-neutral-3( style='min-width: 1280px;')
+    .container-fluid.pan
+      section.header
+        .row.pan.man
+          include ../../../partials/header
+      hr.man
+      section.content
+        .row.pan.man
+          .col-xs-24.col-sm-24.col-md-24.col-lg-24.pan
+            //- Left Panel
+            include ../../../partials/left
+            //- Center Panel
+            include ../../../partials/apps/running/content
+            //- Right Panel
+            include ../../../partials/right
+      section.footer
+        include ../../../partials/footer
