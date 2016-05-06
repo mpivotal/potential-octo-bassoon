@@ -10,13 +10,13 @@ $(document).ready( function() {
     var defaultstate = $('.app-states .running')
     var crashing = $('.app-states .crashing')
     var total = $('.app-states .total')
-    if ($('.apps.running').length > 0) {
+    if ($('.apps-screen.running').length > 0) {
       defaultstate.addClass('active')
     }
-    if ($('.apps.crashing').length > 0) {
+    if ($('.apps-screen.crashing').length > 0) {
       crashing.addClass('active')
     }
-    if ($('.apps.total').length > 0) {
+    if ($('.apps-screen.total').length > 0) {
       total.addClass('active')
     }
     // app selection

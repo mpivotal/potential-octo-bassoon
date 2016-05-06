@@ -1,65 +1,12 @@
-.apps.running.col-xs-16.col-sm-16.col-md-16.col-lg-16.bg-neutral-11.pan(style='border-right: 1px solid rgba(0,0,0,0.1); border-left: 1px solid rgba(0,0,0,0.1); min-height: 720px;')
+.apps-screen.running.col-xs-16.col-sm-16.col-md-16.col-lg-16.bg-neutral-11.pan
   include ../states
   //- hr.mvn
   .row.man.apps
     .col-xs-24.col-sm-24.col-md-24.col-lg-24.pan.man
-      span.dropdown.mvl.mhm
-        button#app-actions.dropdown-toggle.btn.btn-default-alt.em-default.type-neutral-3(disabled='true', type='button', data-toggle='dropdown', arai-haspopup='true', aria-exanded='false')
-          span App Actions
-          span.caret.mls
-        ul.dropdown-menu(role='menu', aria-labelledby='app-actions')
-          li.presentation
-            a.pll.type-neutral-5.bg-neutral-11(style='cursor: default;')
-              .fa.fa-icon.fa-play.small.mrxl
-              | Start
-          li.divider.mvn
-          li.presentation
-            a.pll
-              .fa.fa-icon.fa-square.small.mrxl
-              | Stop
-          li.divider.mvn
-          li.presentation
-            a.rename.pll
-              .fa.fa-icon.fa-pencil.small.mrxl
-              | Rename
-          li.divider.mvn
-          li.presentation
-            a.pll
-              .fa.fa-icon.fa-repeat.small.mrxl
-              | Restart
-          li.divider.mvn
-          li.presentation
-            a.pll
-              .fa.fa-icon.fa-refresh.small.mrxl
-              | Restage
-          li.divider.mvn
-          li.presentation
-            a.pll.type-error-3
-              .fa.fa-icon.fa-trash.small.mrxl
-              | Delete
-      span.dropdown.mvl.mhm
-        button#spaces.dropdown-toggle.btn.btn-default-alt.em-default.type-neutral-3(type='button', data-toggle='dropdown', arai-haspopup='true', aria-exanded='false')
-          span All Spaces
-          span.caret.mls
-        ul.dropdown-menu(role='menu', aria-labelledby='spaces')
-          li.presentation
-            a.type-neutral-6 All Spaces
-          li.divider.mvn
-          li.presentation
-            a conslidify
-          li.divider.mvn
-          li.presentation
-            a Donary
-          li.divider.mvn
-          li.presentation
-            a Opension
-          li.divider.mvn
-          li.presentation
-            a plande
-          li.divider.mvn
-          li.presentation
-            a vlanyale
-
+      //- app actions
+      include ../app-actions
+      //- spaces dropdown
+      include ../spaces-dropdown
       table#apps.table.pan
         tr
           th
