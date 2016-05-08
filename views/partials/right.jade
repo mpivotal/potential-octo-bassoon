@@ -5,7 +5,7 @@
     .progress.mts
       - var quota = 10
       - var quota_used = 2.5
-      - var quota_percent = (100 * quota_used / quota).toFixed(0)
+      - var quota_percent = (100 * (quota_used / quota)).toFixed(0)
       .progress-bar(role='progressbar',style="width: #{quota_percent}%;", aria-valuenow='#{quota_percent}', aria-valuemin='0', aria-valuemax='100')
         .label
           | #{quota_percent}%
