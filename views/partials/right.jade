@@ -3,8 +3,11 @@
     .em-alt.type-sm.em-low
       | Org Quota
     .progress.mts
-      .progress-bar(role='progressbar',style='width: 25%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+      - var quota = 10
+      - var quota_used = 3.1
+      - var quota_percent = (100 * quota_used / quota).toFixed(0)
+      .progress-bar(role='progressbar',style="width: #{quota_percent}%;", aria-valuenow='#{quota_percent}', aria-valuemin='0', aria-valuemax='100')
         .label
-          | 25%
+          | #{quota_percent}%
     p.small
-      | 2.5GB of 10GB Used
+      | #{quota_used}GB of #{quota}GB
