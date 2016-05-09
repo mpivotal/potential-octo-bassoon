@@ -1,11 +1,5 @@
 $(document).ready( function() {
   if ( $('.org .apps').length != 0 ) {
-    // app status selection
-    // var appstates = $('.app-states .status')
-    // appstates.click( function() {
-    //   appstates.removeClass('active')
-    //   $(this).addClass('active')
-    // })
     // default state is active
     var defaultstate = $('.app-states .running')
     var crashing = $('.app-states .crashing')
@@ -26,6 +20,14 @@ $(document).ready( function() {
       checkboxes.prop('checked', checkboxes.prop('checked'))
     })
     checkboxes.click( function() {
+      // deselect the 'all' checkbox if only some checkboxes are selected
+      if ($(this).prop('value') != 'all') {
+        $("input[type='checkbox'][name='apps[]'][value='all']").prop('checked', false)
+      }
+      // select the 'all' checkbox if all are selected
+      // if (checkboxes.prop('checked', true).length > checkboxes.length - 1) {
+      //   $("input[type='checkbox'][value='all']").prop('checked', false)
+      // }
       // toggle the actions button
       if ($("input:checkbox:checked").length > 0) {
         actions.prop('disabled', false)
@@ -33,10 +35,17 @@ $(document).ready( function() {
         actions.prop('disabled', true)
       }
       // toggle the rename action
+      var single_app_actions = ['rename', 'delete', 'metrics', 'add-service']
       if ($("input:checkbox:checked").length > 1) {
-        $('.rename').addClass('type-neutral-5').addClass('bg-neutral-11').prop('style', 'cursor: default;')
+        for (i in single_app_actions) {
+          console.log(single_app_actions[i])
+          $('.' + single_app_actions[i]).addClass('type-neutral-5').addClass('bg-neutral-11').prop('style', 'cursor: default;')
+        }
       } else {
-        $('.rename').removeClass('type-neutral-5').removeClass('bg-neutral-11').prop('style', 'cursor: pointer;')
+        for (i in single_app_actions) {
+          console.log(single_app_actions[i])
+          $('.' + single_app_actions[i]).removeClass('type-neutral-5').removeClass('bg-neutral-11').prop('style', 'cursor: pointer;')
+        }
       }
     })
   }

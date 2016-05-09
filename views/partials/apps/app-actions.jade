@@ -4,14 +4,24 @@ span.dropdown.mvl.mhm
     span.caret.mls
   ul.dropdown-menu(role='menu', aria-labelledby='app-actions')
     li.presentation
-      a.pll.type-neutral-5.bg-neutral-11(style='cursor: default;')
+      a.start.pll.type-neutral-5.bg-neutral-11(style='cursor: default;')
         .fa.fa-icon.fa-play.small.mrxl
         | Start
     li.divider.mvn
     li.presentation
-      a.pll
+      a.stop.pll
         .fa.fa-icon.fa-square.small.mrxl
         | Stop
+    li.divider.mvn
+    li.presentation
+      a.restart.pll
+        .fa.fa-icon.fa-repeat.small.mrxl
+        | Restart
+    li.divider.mvn
+    li.presentation
+      a.restage.pll
+        .fa.fa-icon.fa-refresh.small.mrxl
+        | Restage
     li.divider.mvn
     li.presentation
       a.rename.pll
@@ -19,16 +29,16 @@ span.dropdown.mvl.mhm
         | Rename
     li.divider.mvn
     li.presentation
-      a.pll
-        .fa.fa-icon.fa-repeat.small.mrxl
-        | Restart
+      a.add-service.pll
+        .fa.fa-icon.fa-wrench.small.mrxl
+        | Add Service
     li.divider.mvn
     li.presentation
-      a.pll
-        .fa.fa-icon.fa-refresh.small.mrxl
-        | Restage
+      a.metrics.pll
+        .fa.fa-icon.fa-line-chart.small.mrxl(style='margin-right: 16px !important;')
+        | Metrics
     li.divider.mvn
     li.presentation
-      a.pll.type-error-3
-        .fa.fa-icon.fa-trash.small.mrxl
+      a.delete.pll
+        .fa.fa-icon.fa-trash.small.mrxl(style='margin-right: 22px !important;')
         | Delete
