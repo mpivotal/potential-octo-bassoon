@@ -1,5 +1,5 @@
 ---
 applications:
 - name: appsman
-  memory: 512M
+  memory: 128M
   instances: 1
